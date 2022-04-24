@@ -2,7 +2,10 @@ fileFormatVersion: 2
 guid: b01356c890298c345935913734502ae0
 ModelImporter:
   serializedVersion: 21202
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 6232192438518074561
+    second: Doggy_clothes1.003|Doggy_clothes1.003Action
   externalObjects: {}
   materials:
     materialImportMode: 2
