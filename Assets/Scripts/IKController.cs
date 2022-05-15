@@ -40,29 +40,41 @@ public class IKController : MonoBehaviour
                 case IKAvatarGroup.LeftArm:
                 animator.SetIKPosition(AvatarIKGoal.LeftHand, ikSet.IKTarget.position);
                 animator.SetIKPositionWeight(AvatarIKGoal.LeftHand, ikSet.IKTargetWeight);
-                animator.SetIKHintPosition(AvatarIKHint.LeftElbow, ikSet.IKHint.position);
-                animator.SetIKHintPositionWeight(AvatarIKHint.LeftElbow, ikSet.IKHintWeight);
+                if(ikSet.IKHint != null)
+                {
+                    animator.SetIKHintPosition(AvatarIKHint.LeftElbow, ikSet.IKHint.position);
+                    animator.SetIKHintPositionWeight(AvatarIKHint.LeftElbow, ikSet.IKHintWeight);
+                }
                 break;
 
                 case IKAvatarGroup.RightArm:
                 animator.SetIKPosition(AvatarIKGoal.RightHand, ikSet.IKTarget.position);
                 animator.SetIKPositionWeight(AvatarIKGoal.RightHand, ikSet.IKTargetWeight);
-                animator.SetIKHintPosition(AvatarIKHint.RightElbow, ikSet.IKHint.position);
-                animator.SetIKHintPositionWeight(AvatarIKHint.RightElbow, ikSet.IKHintWeight);
+                if(ikSet.IKHint != null)
+                {
+                    animator.SetIKHintPosition(AvatarIKHint.RightElbow, ikSet.IKHint.position);
+                    animator.SetIKHintPositionWeight(AvatarIKHint.RightElbow, ikSet.IKHintWeight);
+                }
                 break;
 
                 case IKAvatarGroup.LeftLeg:
                 animator.SetIKPosition(AvatarIKGoal.LeftFoot, ikSet.IKTarget.position);
                 animator.SetIKPositionWeight(AvatarIKGoal.LeftFoot, ikSet.IKTargetWeight);
-                animator.SetIKHintPosition(AvatarIKHint.LeftKnee, ikSet.IKHint.position);
-                animator.SetIKHintPositionWeight(AvatarIKHint.LeftKnee, ikSet.IKHintWeight);
+                if(ikSet.IKHint != null)
+                {
+                    animator.SetIKHintPosition(AvatarIKHint.LeftKnee, ikSet.IKHint.position);
+                    animator.SetIKHintPositionWeight(AvatarIKHint.LeftKnee, ikSet.IKHintWeight);
+                }
                 break;
 
                 case IKAvatarGroup.RightLeg:
                 animator.SetIKPosition(AvatarIKGoal.RightFoot, ikSet.IKTarget.position);
                 animator.SetIKPositionWeight(AvatarIKGoal.RightFoot, ikSet.IKTargetWeight);
-                animator.SetIKHintPosition(AvatarIKHint.RightKnee, ikSet.IKHint.position);
-                animator.SetIKHintPositionWeight(AvatarIKHint.RightKnee, ikSet.IKHintWeight);
+                if(ikSet.IKHint != null)
+                {
+                    animator.SetIKHintPosition(AvatarIKHint.RightKnee, ikSet.IKHint.position);
+                    animator.SetIKHintPositionWeight(AvatarIKHint.RightKnee, ikSet.IKHintWeight);
+                }
                 break;
 
                 default:
