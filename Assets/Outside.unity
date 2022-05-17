@@ -712,7 +712,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.523858, y: 1}
+    m_SensorSize: {x: 1.1482234, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -894,8 +894,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136299250}
-  m_LocalRotation: {x: 0.005352479, y: -0.99388176, z: -0.019203246, w: 0.10863517}
-  m_LocalPosition: {x: -38.4, y: 10.2, z: 137.9}
+  m_LocalRotation: {x: 0.0085496, y: -0.94721866, z: 0.3204659, w: 0.0023093238}
+  m_LocalPosition: {x: -52.4, y: 97.1, z: 166.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -965,7 +965,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.523858, y: 1}
+    m_SensorSize: {x: 1.1482234, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3776,7 +3776,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.523858, y: 1}
+    m_SensorSize: {x: 1.1482234, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -5859,16 +5859,12 @@ PlayableDirector:
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
-  - key: {fileID: 3330582065142569878, guid: 8ecc2b9169cd3ab4e932393329fd873f, type: 2}
-    value: {fileID: 2795544201129274746}
   - key: {fileID: 5937022307591162996, guid: 8ecc2b9169cd3ab4e932393329fd873f, type: 2}
     value: {fileID: 2795544201129274746}
   - key: {fileID: -6444859982022640859, guid: 8ecc2b9169cd3ab4e932393329fd873f, type: 2}
     value: {fileID: 2795544201129274746}
   - key: {fileID: 8959055305187745648, guid: 8ecc2b9169cd3ab4e932393329fd873f, type: 2}
     value: {fileID: 136299256}
-  - key: {fileID: -3918473319883368278, guid: 8ecc2b9169cd3ab4e932393329fd873f, type: 2}
-    value: {fileID: 1104474964}
   m_ExposedReferences:
     m_References:
     - 6567e933297553841a1fa0c0837783b0: {fileID: 1120726068}
