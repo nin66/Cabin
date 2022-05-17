@@ -5588,13 +5588,7 @@ Animator:
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'mixamorig:LeftFoot'\n\tTransform 'mixamorig:LeftHandThumb2'\n\tTransform
-    'mixamorig:LeftHandIndex1'\n\tTransform 'mixamorig:RightHandRing2'\n\tTransform
-    'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:LeftHandThumb3'\n\tTransform
-    'mixamorig:RightArm'\n\tTransform 'mixamorig:LeftLeg'\n\tTransform 'mixamorig:LeftHandMiddle3'\n\tand
-    more ..."
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -11409,7 +11403,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6294416, y: 1}
+    m_SensorSize: {x: 1.77707, y: 1}
   m_Transitions:
     m_BlendHint: 3
     m_InheritPosition: 0
@@ -11434,6 +11428,11 @@ Transform:
   m_Father: {fileID: 946180909}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0.18, y: 0, z: 0}
+--- !u!1 &512498018 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 112932, guid: 1a59f0a7e65a5b04aa48968eb0720fbc, type: 3}
+  m_PrefabInstance: {fileID: 172636922}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &590105883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12511,6 +12510,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 426352, guid: 1a59f0a7e65a5b04aa48968eb0720fbc, type: 3}
   m_PrefabInstance: {fileID: 172636922}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &838705434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512498018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ce60cca4501a4d4487a7bbb248b9a0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 0.3
+  lights:
+  - {fileID: 1191992122}
+  - {fileID: 2037068830}
+  speed: 0.0075
 --- !u!1001 &845875436
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14483,7 +14499,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6294416, y: 1}
+    m_SensorSize: {x: 1.77707, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -16081,7 +16097,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6294416, y: 1}
+    m_SensorSize: {x: 1.77707, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -18049,13 +18065,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'mixamorig:LeftFoot'\n\tTransform 'mixamorig:LeftHandThumb2'\n\tTransform
-    'mixamorig:LeftHandIndex1'\n\tTransform 'mixamorig:RightHandRing2'\n\tTransform
-    'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:LeftHandThumb3'\n\tTransform
-    'mixamorig:RightArm'\n\tTransform 'mixamorig:LeftLeg'\n\tTransform 'mixamorig:LeftHandMiddle3'\n\tand
-    more ..."
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -18223,7 +18233,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6294416, y: 1}
+    m_SensorSize: {x: 1.77707, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -18239,7 +18249,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1790925903}
-  m_LocalRotation: {x: 0.01425229, y: -0.68702006, z: 0.013480127, w: 0.7263736}
+  m_LocalRotation: {x: 0.043020353, y: -0.6923311, z: 0.04141863, w: 0.7191046}
   m_LocalPosition: {x: -0.26493454, y: 0.31103897, z: 5.774475}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -19253,7 +19263,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 62.77
+  field of view: 53.638386
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -19278,8 +19288,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1915319779}
-  m_LocalRotation: {x: 0.0015707754, y: 0, z: 0, w: 0.9999988}
-  m_LocalPosition: {x: -47.98, y: 9.4, z: 128.9}
+  m_LocalRotation: {x: 0.043020353, y: -0.6923311, z: 0.04141863, w: 0.7191046}
+  m_LocalPosition: {x: -42.84091, y: 8.857564, z: 149.48586}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
