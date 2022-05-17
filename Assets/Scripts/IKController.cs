@@ -25,6 +25,8 @@ public class IKController : MonoBehaviour
 
     [SerializeField]
     private IKSet[] IKTargetSettings;
+    [SerializeField]
+    private float lerpSpeed = 1;
 
     private void Awake() 
     {
@@ -80,5 +82,29 @@ public class IKController : MonoBehaviour
         }
         animator.SetIKHintPosition(avatarIKHint, ikPropInfo.IKHint.position);
         animator.SetIKHintPositionWeight(avatarIKHint, ikPropInfo.IKHintWeight);
+    }
+
+    public void LerpIn()
+    {
+        StartCoroutine(IKLerpCo(lerpSpeed));
+    }
+
+    public void LerpOut()
+    {
+        StartCoroutine(IKLerpCo(-lerpSpeed));
+    }
+
+    private IEnumerator IKLerpCo(float lerpDelta)
+    {
+        bool ended = false;
+        while(!ended)
+        {
+            foreach(IKSet ikSet in IKTargetSettings)
+            {
+                ikSet.IKTargetWeight = Mathf.Clamp01(Time.deltaTime * lerpDelta + ikSet.IKTargetWeight);
+                ikSet.IKHintWeight = Mathf.Clamp01(Time.deltaTime * lerpDelta + ikSet.IKHintWeight);
+            }
+            yield return null;
+        }
     }
 }
