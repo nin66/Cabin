@@ -15,6 +15,9 @@ public class IKController : MonoBehaviour
         public Transform IKTarget;
         [Range(0,1)]
         public float IKTargetWeight;
+        public bool ApplyIKRotation = true;
+        [Range(0,1)]
+        public float IKRotationTargetWeight;
         public Transform IKHint;
         [Range(0,1)]
         public float IKHintWeight;
@@ -22,11 +25,13 @@ public class IKController : MonoBehaviour
 
 
     private Animator animator;
+    private Coroutine activeLerp;
 
     [SerializeField]
     private IKSet[] IKTargetSettings;
     [SerializeField]
     private float lerpSpeed = 1;
+    
 
     private void Awake() 
     {
@@ -76,6 +81,12 @@ public class IKController : MonoBehaviour
         animator.SetIKPosition(avatarIKGoal, ikPropInfo.IKTarget.position);
         animator.SetIKPositionWeight(avatarIKGoal, ikPropInfo.IKTargetWeight);
 
+        if(ikPropInfo.ApplyIKRotation)
+        {
+            animator.SetIKRotation(avatarIKGoal, ikPropInfo.IKTarget.rotation);
+            animator.SetIKRotationWeight(avatarIKGoal, ikPropInfo.IKRotationTargetWeight);
+        }
+
         if(ikPropInfo.IKHint == null)
         {
             return;
@@ -86,23 +97,46 @@ public class IKController : MonoBehaviour
 
     public void LerpIn()
     {
-        StartCoroutine(IKLerpCo(lerpSpeed));
+        SetIKLerp(IKLerpCo(lerpSpeed));
     }
 
     public void LerpOut()
     {
-        StartCoroutine(IKLerpCo(-lerpSpeed));
+        SetIKLerp(IKLerpCo(-lerpSpeed));
+    }
+
+    private void SetIKLerp(IEnumerator LerpCo)
+    {
+        if(activeLerp != null)
+        {
+            StopCoroutine(activeLerp);
+        }
+        activeLerp = StartCoroutine(LerpCo);
     }
 
     private IEnumerator IKLerpCo(float lerpDelta)
     {
         bool ended = false;
+        float targetWeight = 0;
+        if(lerpDelta >= 0)
+        {
+            targetWeight = 1;
+        }
+        else
+        {
+            targetWeight = 0;
+        }
         while(!ended)
         {
+            ended = true;
             foreach(IKSet ikSet in IKTargetSettings)
             {
                 ikSet.IKTargetWeight = Mathf.Clamp01(Time.deltaTime * lerpDelta + ikSet.IKTargetWeight);
+                if(!Mathf.Approximately(ikSet.IKTargetWeight, targetWeight))
+                    ended = false;
                 ikSet.IKHintWeight = Mathf.Clamp01(Time.deltaTime * lerpDelta + ikSet.IKHintWeight);
+                if(!Mathf.Approximately(ikSet.IKHintWeight, targetWeight))
+                    ended = false;
             }
             yield return null;
         }
