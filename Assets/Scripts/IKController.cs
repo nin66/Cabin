@@ -15,6 +15,9 @@ public class IKController : MonoBehaviour
         public Transform IKTarget;
         [Range(0,1)]
         public float IKTargetWeight;
+        public bool ApplyIKRotation = true;
+        [Range(0,1)]
+        public float IKRotationTargetWeight;
         public Transform IKHint;
         [Range(0,1)]
         public float IKHintWeight;
@@ -77,6 +80,12 @@ public class IKController : MonoBehaviour
         }
         animator.SetIKPosition(avatarIKGoal, ikPropInfo.IKTarget.position);
         animator.SetIKPositionWeight(avatarIKGoal, ikPropInfo.IKTargetWeight);
+
+        if(ikPropInfo.ApplyIKRotation)
+        {
+            animator.SetIKRotation(avatarIKGoal, ikPropInfo.IKTarget.rotation);
+            animator.SetIKRotationWeight(avatarIKGoal, ikPropInfo.IKRotationTargetWeight);
+        }
 
         if(ikPropInfo.IKHint == null)
         {
