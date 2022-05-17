@@ -28,7 +28,7 @@ public class FireFlicker : MonoBehaviour
     {
         for(int i = 0; i < lights.Length; i++)
         {
-            lights[i].position = initialLightPositions[i] + new Vector3(Mathf.PerlinNoise(Time.time * FlickerFrequency, - lightPerlinOffset[i].x) - 0.5f, Mathf.PerlinNoise(Time.time * FlickerDistance, - lightPerlinOffset[i].y) - 0.5f, 0);
+            lights[i].position = initialLightPositions[i] + new Vector3(Mathf.PerlinNoise(Time.time * FlickerFrequency, - lightPerlinOffset[i].x) - 0.5f, Mathf.PerlinNoise(Time.time * FlickerFrequency, - lightPerlinOffset[i].y) - 0.5f, 0) * FlickerDistance;
         }
     }
 }
