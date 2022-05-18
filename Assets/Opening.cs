@@ -10,6 +10,7 @@ public class Opening : MonoBehaviour
     public float timer = 10f;
     public bool tick = false;
     [SerializeField] private Canvas UI;
+    public float cloudSpeed;
     void Start()
     {
         Time.timeScale = 0;
@@ -31,7 +32,7 @@ public class Opening : MonoBehaviour
             timer -= Time.deltaTime;
             for (int i = clouds.Length - 1; i > -1; i--)
             {
-                Vector3 move = new Vector3(0.1f*(float)dir[i],0,0);
+                Vector3 move = new Vector3(cloudSpeed*(float)dir[i],0,0);
                 clouds[i].transform.Translate(move);
             }
         }
