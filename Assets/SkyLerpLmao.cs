@@ -7,6 +7,7 @@ public class SkyLerpLmao : MonoBehaviour
     // Start is called before the first frame update
 
     [SerializeField] private Material day;
+    [SerializeField] private Material temp;
     [SerializeField] private Material night;
     [SerializeField] private bool lerp;
     private Material Storage;
@@ -21,10 +22,11 @@ public class SkyLerpLmao : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        day = temp;
         if (lerp)
         {
             x += Time.deltaTime*speed;
-            RenderSettings.skybox.Lerp(day,night,x);
+            RenderSettings.skybox.Lerp(temp,night,x);
         }
 
         
